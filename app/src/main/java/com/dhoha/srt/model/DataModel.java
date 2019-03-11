@@ -2,18 +2,23 @@ package com.dhoha.srt.model;
 
 public class DataModel {
 
-    String id, nom, prenom, email, motDePasse;
+    String id, nom, prenom, email, motDePasse,reference;
 
-    public DataModel(String id, String nom, String prenom, String email, String motDePasse) {
+    public DataModel(String id,String reference, String nom, String prenom, String email, String motDePasse) {
         this.id = id;
         this.nom = nom;
         this.prenom = prenom;
         this.email = email;
         this.motDePasse = motDePasse;
+        this.reference=reference;
     }
 
     public String getId() {
         return id;
+    }
+
+    public String getReference() {
+        return reference;
     }
 
     public String getNom() {
