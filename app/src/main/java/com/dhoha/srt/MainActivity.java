@@ -44,19 +44,24 @@ EditText edtEmail,edtPassword;
                 @Override
                 public void onResponse(Call<ResponseDataModel> call, Response<ResponseDataModel> response) {
                     if(response.isSuccessful()){
-                        if(response.body().getResult().get(0).getEmail().equals(edtEmail.getText().toString())){
-                            if(response.body().getResult().get(0).getMotDePasse().equals(edtPassword.getText().toString())){
+                        if(!response.body().getResult().isEmpty()) {
+                            if (response.body().getResult().get(0).getEmail().equals(edtEmail.getText().toString())) {
+                                if (response.body().getResult().get(0).getMotDePasse().equals(edtPassword.getText().toString())) {
 
-                                Intent intent=new Intent(MainActivity.this,MenuPrincipal.class);
-                                startActivity(intent);
+                                    Intent intent = new Intent(MainActivity.this, MenuPrincipal.class);
+                                    startActivity(intent);
 
-                            }else {
-                                Toast.makeText(MainActivity.this, "Mot De Passe Incorrect", Toast.LENGTH_SHORT).show();
+                                } else {
+                                    Toast.makeText(MainActivity.this, "Mot De Passe Incorrect", Toast.LENGTH_SHORT).show();
+                                }
+                            } else {
+                                Toast.makeText(MainActivity.this, "Email Incorrect", Toast.LENGTH_SHORT).show();
+
                             }
                         }else {
-                            Toast.makeText(MainActivity.this, "Email Incorrect", Toast.LENGTH_SHORT).show();
+                                Toast.makeText(MainActivity.this, "Email Incorrect", Toast.LENGTH_SHORT).show();
 
-                        }
+                            }
                     }else {
                         Toast.makeText(MainActivity.this, "Email Incorrect", Toast.LENGTH_SHORT).show();
                     }
@@ -64,7 +69,7 @@ EditText edtEmail,edtPassword;
 
                 @Override
                 public void onFailure(Call<ResponseDataModel> call, Throwable t) {
-                    Toast.makeText(MainActivity.this, "Erreur Connexion", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(MainActivity.this, "Problem Connexion", Toast.LENGTH_SHORT).show();
                 }
             });
 
