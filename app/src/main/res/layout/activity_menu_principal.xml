@@ -4,7 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MenuPrincipal">
+    tools:context=".MenuPrincipal"
+    android:background="@drawable/gradient_background">
 
     <Button
         android:id="@+id/btnMateriel"
@@ -16,6 +17,7 @@
         android:layout_marginEnd="8dp"
         android:layout_marginRight="8dp"
         android:text="Consulter Materiel"
+        android:background="@drawable/gradient_button"
         android:drawableLeft="@drawable/ic_settings_black_24dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -32,6 +34,7 @@
         android:layout_marginRight="8dp"
         android:drawableLeft="@drawable/ic_content_copy_black_24dp"
         android:text="Consulter Composant"
+        android:background="@drawable/gradient_button"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/btnMateriel" />
@@ -47,6 +50,7 @@
         android:layout_marginEnd="8dp"
         android:layout_marginRight="8dp"
         android:text="Consulter Logeciel"
+        android:background="@drawable/gradient_button"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/btnComposant" />
