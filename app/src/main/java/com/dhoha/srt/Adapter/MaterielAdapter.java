@@ -9,6 +9,7 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.dhoha.srt.MaterielDescription;
 import com.dhoha.srt.R;
 import com.dhoha.srt.model.DataModel;
 
@@ -57,17 +58,13 @@ public class MaterielAdapter extends RecyclerView.Adapter<MaterielAdapter.ActorV
             itemView.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-                   /* if(btnClicked.equals("voyage")) {
-                        Intent intent = new Intent(ctx, VoyageDescription.class);
-                        intent.putExtra("titre", dm.getTitre());
-                        intent.putExtra("description", dm.getDescription());
+                        Intent intent = new Intent(ctx, MaterielDescription.class);
+                        intent.putExtra("reference", dm.getReference());
+                        intent.putExtra("nom_m", dm.getNom_m());
+                        intent.putExtra("format_m", dm.getFormat_m());
+                        intent.putExtra("marque", dm.getMarque());
+                        intent.putExtra("type_m", dm.getType_m());
                         ctx.startActivity(intent);
-                    }else {
-                        Intent intent = new Intent(ctx, ReserverPlaces.class);
-                        intent.putExtra("id_voyage", dm.getId());
-                        intent.putExtra("id_client", idClient);
-                        ctx.startActivity(intent);
-                    }*/
 
                 }
             });

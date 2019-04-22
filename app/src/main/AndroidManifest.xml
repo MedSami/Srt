@@ -11,7 +11,10 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".ListLogiciel"></activity>
+        <activity android:name=".MaterielDescription"></activity>
+        <activity android:name=".LogecielDescription" />
+        <activity android:name=".ComposantDescription" />
+        <activity android:name=".ListLogiciel" />
         <activity android:name=".ListMateriel" />
         <activity android:name=".ListComposant" />
         <activity android:name=".MenuPrincipal" />

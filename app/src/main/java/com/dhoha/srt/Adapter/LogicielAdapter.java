@@ -1,6 +1,7 @@
 package com.dhoha.srt.Adapter;
 
 import android.content.Context;
+import android.content.Intent;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -8,6 +9,7 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.dhoha.srt.LogecielDescription;
 import com.dhoha.srt.R;
 import com.dhoha.srt.model.DataModel;
 
@@ -56,17 +58,15 @@ public class LogicielAdapter extends RecyclerView.Adapter<LogicielAdapter.ActorV
             itemView.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-                   /* if(btnClicked.equals("voyage")) {
-                        Intent intent = new Intent(ctx, VoyageDescription.class);
-                        intent.putExtra("titre", dm.getTitre());
-                        intent.putExtra("description", dm.getDescription());
+
+                        Intent intent = new Intent(ctx, LogecielDescription.class);
+                        intent.putExtra("reference", dm.getReference());
+                        intent.putExtra("nom_log", dm.getNom_log());
+                        intent.putExtra("type_log", dm.getType_log());
+                        intent.putExtra("version_log", dm.getVersion_log());
+                        intent.putExtra("licence", dm.getLicence());
                         ctx.startActivity(intent);
-                    }else {
-                        Intent intent = new Intent(ctx, ReserverPlaces.class);
-                        intent.putExtra("id_voyage", dm.getId());
-                        intent.putExtra("id_client", idClient);
-                        ctx.startActivity(intent);
-                    }*/
+
 
                 }
             });

@@ -3,6 +3,7 @@ package com.dhoha.srt;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -70,6 +71,8 @@ EditText edtEmail,edtPassword;
                 @Override
                 public void onFailure(Call<ResponseDataModel> call, Throwable t) {
                     Toast.makeText(MainActivity.this, "Problem Connexion", Toast.LENGTH_SHORT).show();
+                    Log.i("TAG", "onFailure: "+t.getMessage());
+
                 }
             });
 

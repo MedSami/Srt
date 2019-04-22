@@ -8,6 +8,7 @@ import android.widget.Toast;
 
 import com.dhoha.srt.API.ApiRequest;
 import com.dhoha.srt.API.RetrofitService;
+import com.dhoha.srt.Adapter.ComposantAdapter;
 import com.dhoha.srt.Adapter.MaterielAdapter;
 import com.dhoha.srt.model.DataModel;
 import com.dhoha.srt.model.ResponseDataModel;
@@ -40,7 +41,7 @@ public class ListComposant extends AppCompatActivity {
 
                     RecycleLayout.setLayoutManager(RecycleManager);
 
-                    composantAdapter = new MaterielAdapter(item, ListComposant.this);
+                    composantAdapter = new ComposantAdapter(item, ListComposant.this);
 
                     RecycleLayout.setAdapter(composantAdapter);
                 }

@@ -1,6 +1,7 @@
 package com.dhoha.srt.Adapter;
 
 import android.content.Context;
+import android.content.Intent;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -8,6 +9,7 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.dhoha.srt.ComposantDescription;
 import com.dhoha.srt.R;
 import com.dhoha.srt.model.DataModel;
 
@@ -56,17 +58,14 @@ public class ComposantAdapter extends RecyclerView.Adapter<ComposantAdapter.Acto
             itemView.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-                   /* if(btnClicked.equals("voyage")) {
-                        Intent intent = new Intent(ctx, VoyageDescription.class);
-                        intent.putExtra("titre", dm.getTitre());
-                        intent.putExtra("description", dm.getDescription());
+
+                        Intent intent = new Intent(ctx, ComposantDescription.class);
+                        intent.putExtra("Ref", dm.getReference());
+                        intent.putExtra("Lib", dm.getLib_comp());
+                        intent.putExtra("Etat", dm.getEtat_comp());
+                        intent.putExtra("Marque", dm.getMarque());
                         ctx.startActivity(intent);
-                    }else {
-                        Intent intent = new Intent(ctx, ReserverPlaces.class);
-                        intent.putExtra("id_voyage", dm.getId());
-                        intent.putExtra("id_client", idClient);
-                        ctx.startActivity(intent);
-                    }*/
+
 
                 }
             });
